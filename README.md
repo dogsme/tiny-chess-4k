@@ -6,7 +6,7 @@
 
 Built for the [make.fun bounty: Build the strongest chess engine in 4 KB of Python](https://make.fun/bounty/tiny-chess-01).
 
-`main.py` is the whole engine: 3,267 bytes, Python 3.13, standard library only. It contains a complete legal move generator (castling, en passant, promotions, check evasion — perft-verified against the standard reference positions), a negamax alpha-beta search with quiescence, MVV-LVA move ordering and a fixed node budget (deterministic: no clock, no randomness), and a material + positional evaluation. As the rules allow, the engine source is packed into `main.py` as a zlib/base85 payload that unpacks and execs itself; the readable source is developed and tested alongside it.
+`main.py` is the whole engine: 3,757 bytes, Python 3.13, standard library only. It contains a complete legal move generator (castling, en passant, promotions, check evasion — perft-verified against the standard reference positions), a negamax alpha-beta search with quiescence, MVV-LVA move ordering and a fixed node budget (deterministic: no clock, no randomness), and a material + positional evaluation. As the rules allow, the engine source is packed into `main.py` as a zlib/base85 payload that unpacks and execs itself; the readable source is developed and tested alongside it.
 
 The engine plays through the make.fun env: it reads the game at `MAKEFUN_ENV_URL`, and for every position chooses a move with its search.
 
